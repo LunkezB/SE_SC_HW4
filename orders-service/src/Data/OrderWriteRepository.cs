@@ -10,7 +10,6 @@ namespace OrdersService.Data
             string? description, string paymentRequestedPayloadJson, CancellationToken ct)
         {
             DateTimeOffset now = DateTimeOffset.UtcNow;
-            // orderId is generated upstream so it can be referenced in the outbox payload.
 
             await using NpgsqlConnection conn = await ds.OpenConnectionAsync(ct);
             await using NpgsqlTransaction tx = await conn.BeginTransactionAsync(ct);
