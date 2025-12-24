@@ -55,7 +55,8 @@ docker compose up --build
 ```bash
 curl -X POST http://localhost:8080/accounts/create \
   -H "Content-Type: application/json" \
-  -H "X-User-Id: <USER_ID>"
+  -H "X-User-Id: <USER_ID>" \
+  -d "{}"
 ```
 
 ### Пополнение счёта
